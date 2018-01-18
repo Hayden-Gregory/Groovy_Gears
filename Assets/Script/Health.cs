@@ -46,4 +46,10 @@ public class Health : MonoBehaviour {
             Death();
         }
     }
+
+    //turn off all our shit
+    void Death()
+    {
+        isDead = true;
+    }
 }
