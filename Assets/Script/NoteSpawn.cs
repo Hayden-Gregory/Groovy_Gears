@@ -7,6 +7,8 @@ public class NoteSpawn : MonoBehaviour
     public GameObject quarterNote;
     private float x;
     public Vector2 velocity;
+    public GameObject spawnLine;
+    public int divisor;
 
     // Use this for initialization
     void Start()
@@ -20,7 +22,7 @@ public class NoteSpawn : MonoBehaviour
         
         if (Input.anyKeyDown)
         {
-            GameObject quartNote = (GameObject)Instantiate(quarterNote, new Vector2(-2, 3), Quaternion.identity);
+            GameObject quartNote = (GameObject)Instantiate(quarterNote, new Vector2(spawnLine.transform.position.x, spawnLine.transform.position.y + (spawnLine.GetComponent<SpriteRenderer>().bounds.size.y/divisor)), Quaternion.identity);
             quartNote.GetComponent<Rigidbody2D>().velocity = velocity;
         }
     }
