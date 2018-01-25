@@ -8,7 +8,7 @@ public class NoteSpawn : MonoBehaviour
     private float x;
     public Vector2 velocity;
     public GameObject spawnLine;
-    public int divisor;
+    public float divisor;
 
     // Use this for initialization
     void Start()
